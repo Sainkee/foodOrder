@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>foodOrder</title>
+    <style>
+      .inputsec {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        margin: auto;
+        margin-top: 15%;
+      }
+
+      .imgDiv {
+        display: flex;
+        justify-content: center; /* Horizontally center */
+        align-items: center; /* Vertically center */
+        margin: auto;
+        text-align: center;
+      }
+
+      img {
+        height: 200px;
+        width: 200px;
+        display: none;
+      }
+
+      .orderbtn {
+        padding: 15px 45px;
+        margin: 5px;
+        background: #fec195;
+        font-size: 17px;
+        font-weight: 500;
+        color: #181818;
+        cursor: pointer;
+        border: 1px solid #fec195;
+        border-radius: 8px;
+        filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+        width: 150px;
+      }
+
+      .orderbtn:hover {
+        color: white;
+      }
+
+      .orderbtn:active {
+        transform: translate(0em, 0.2em);
+      }
+
+      .orderbtn:disabled {
+        background-color: #ddd; /* Light gray */
+        color: #888; /* Dark gray text */
+        border: 1px solid #ccc; /* Medium gray border */
+        cursor: not-allowed; /* Not allowed cursor */
+      }
+
+      input[type="checkbox"] {
+        font-size: x-large;
+      }
+      .idLabel {
+        color: red;
+      }
+      .orderIdDiv {
+        font-size: 2rem;
+      }
+      .orderIdDiv {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="inputsec">
+      <div>
+        <div><button type="button" class="orderbtn">order</button></div>
+
+        <input type="checkbox" name="burger" id="burger" value="burger" />
+        <label for="burger">Burger</label>
+
+        <input type="checkbox" name="fries" id="fries" value="fries" />
+        <label for="fries">fries</label>
+
+        <input type="checkbox" name="drink" id="drink" value="drink" />
+        <label for="drink">drink</label>
+      </div>
+      <div class="orderIdDiv">
+        <span class="idLabel">orderId :</span>
+        <span id="orderId"></span>
+      </div>
+    </div>
+
+    <div class="imgDiv">
+      <img alt="" srcset="" id="foodImg" />
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
